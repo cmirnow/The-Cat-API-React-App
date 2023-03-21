@@ -11,6 +11,7 @@ function Breeds() {
   useEffect(() => {
     fetch(url, {
       headers: {
+        "Content-Type": "application/json",
         "x-api-key": api_key,
       },
     })
@@ -21,13 +22,14 @@ function Breeds() {
   return (
     <div className="App">
       <Table
-        className="text-center align-middle md-no-table"
+        className="text-center align-middle md-no-table caption-top"
         bordered
         striped
         hover
         variant="dark"
         size="sm"
       >
+        <caption>Cat Breeds</caption>
         <thead className="align-middle" key={urid()}>
           <tr>
             <th scope="col">Name</th>
