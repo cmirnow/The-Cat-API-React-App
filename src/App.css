@@ -232,8 +232,9 @@ a:hover {
 }
 
 .random img {
-  margin: 30px;
-  height: 300px;
+  margin-top: 30px;
+  max-width: 90%;
+  max-height: 300px;
 }
 
 .random {
