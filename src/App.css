@@ -37,25 +37,19 @@ a {
   color: #FFF;
 }
 a:hover {
-  color: #FFFFCC;
-}
-
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover,
-a:active{
-  text-decoration: underline;
+  color: #61dafb;
 }
 
 .image_cats_collection {
-  width: 200px;
+  width: 100%;
 }
 
 .scroll-to-top {
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.scroll-to-top:hover {
+  opacity: 0.7;
 }
 
 /* no more tables - begin */
