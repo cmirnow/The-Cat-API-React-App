@@ -29,8 +29,15 @@ function Breeds() {
         variant="dark"
         size="sm"
       >
-        <caption>Cat Breeds</caption>
-        <thead className="align-middle" key={urid()}>
+        <caption>
+          <button type="button" className="btn btn-info position-relative">
+            Cat Breeds
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              {apiData.length}
+            </span>
+          </button>
+        </caption>
+        <thead className="align-middle">
           <tr>
             <th scope="col">Name</th>
             <th scope="col">Temperament</th>
@@ -45,7 +52,7 @@ function Breeds() {
             <th scope="col">Image</th>
           </tr>
         </thead>
-        <tbody key={urid()}>
+        <tbody>
           {Array.from(apiData).map((item) => (
             <tr key={urid()}>
               <td data-title="Name" key={urid()}>
