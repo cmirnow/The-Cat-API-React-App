@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/The-Cat-API-React-App/static/css/main.0dc37c90.css",
-    "main.js": "/The-Cat-API-React-App/static/js/main.740394b4.js",
+    "main.js": "/The-Cat-API-React-App/static/js/main.e1cef83d.js",
     "static/js/787.830c59dd.chunk.js": "/The-Cat-API-React-App/static/js/787.830c59dd.chunk.js",
     "static/media/logo.svg": "/The-Cat-API-React-App/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/The-Cat-API-React-App/index.html",
     "main.0dc37c90.css.map": "/The-Cat-API-React-App/static/css/main.0dc37c90.css.map",
-    "main.740394b4.js.map": "/The-Cat-API-React-App/static/js/main.740394b4.js.map",
+    "main.e1cef83d.js.map": "/The-Cat-API-React-App/static/js/main.e1cef83d.js.map",
     "787.830c59dd.chunk.js.map": "/The-Cat-API-React-App/static/js/787.830c59dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0dc37c90.css",
-    "static/js/main.740394b4.js"
+    "static/js/main.e1cef83d.js"
   ]
 }
