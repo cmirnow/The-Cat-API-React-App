@@ -42,7 +42,13 @@ export default class RandomCat extends React.Component {
         </div>
         <div>
           {this.state.loadingState !== STATUS_LOADED && (
-            <div className="loader">Loading...</div>
+            <div
+              className="spinner-border text-warning"
+              style={{ width: "5rem", height: "5rem", margin: "60px auto" }}
+              role="status"
+            >
+              <span className="visually-hidden">Loading...</span>
+            </div>
           )}
           {this.state.loadingState !== STATUS_FETCHING && this.state.image ? (
             <img
