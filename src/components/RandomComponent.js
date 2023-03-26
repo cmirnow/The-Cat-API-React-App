@@ -1,4 +1,5 @@
 import React from "react";
+import urid from "urid";
 
 const STATUS_FETCHING = "fetching";
 const STATUS_FETCHED = "fetched";
@@ -61,7 +62,7 @@ export default class RandomCat extends React.Component {
                 display:
                   this.state.loadingState === STATUS_LOADED ? "inline" : "none",
               }}
-              key={this.state.image}
+              key={urid()}
               src={this.state.image}
               alt="Random Cat"
             />
