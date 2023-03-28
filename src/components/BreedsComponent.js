@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/Table";
 import urid from "urid";
+import "lightbox2/dist/js/lightbox-plus-jquery";
+import "lightbox2/dist/css/lightbox.css";
 
 function Breeds() {
   const url = `https://api.thecatapi.com/v1/breeds`;
@@ -88,12 +90,18 @@ function Breeds() {
                 {item.origin}
               </td>
               <td data-title="Image" key={urid()}>
-                <img
-                  src={item.image.url}
-                  alt={item.name}
-                  title={item.name}
-                  className="image_cats_collection"
-                />
+                <a
+                  href={item.image.url}
+                  data-lightbox="Cat Breeds"
+                  data-title="Cat Breeds"
+                >
+                  <img
+                    src={item.image.url}
+                    alt={item.name}
+                    title={item.name}
+                    className="image_cats_collection"
+                  />
+                </a>
               </td>
             </tr>
           ))}
