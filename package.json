@@ -1,6 +1,6 @@
 {
-  "name": "thecat",
-  "version": "0.1.0",
+  "name": "TheCatAPI-React-App",
+  "version": "0.3.0",
   "private": true,
   "homepage": "https://cmirnow.github.io/The-Cat-API-React-App",
   "dependencies": {

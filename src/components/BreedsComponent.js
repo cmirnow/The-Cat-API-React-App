@@ -93,7 +93,7 @@ function Breeds() {
                 <a
                   href={item.image.url}
                   data-lightbox="Cat Breeds"
-                  data-title="Cat Breeds"
+                  data-title={item.name}
                 >
                   <img
                     src={item.image.url}
