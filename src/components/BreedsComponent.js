@@ -1,28 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Table from "react-bootstrap/Table";
-import urid from "urid";
 import "lightbox2/dist/js/lightbox-plus-jquery";
 import "lightbox2/dist/css/lightbox.css";
+import { fetchCatBreeds } from "../services/catApiService";
 
-function Breeds() {
-  const url = `https://api.thecatapi.com/v1/breeds`;
-  const api_key = process.env.REACT_APP_THECAT_API_KEY;
-  const [apiData, setApiData] = useState({});
+const BreedsComponent = memo(() => {
+  const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    fetch(url, {
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": api_key,
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => setApiData(data.filter((img) => img.image?.url != null)));
-  });
+    fetchCatBreeds(setApiData).catch((error) =>
+      console.error("Error fetching breeds:", error.message)
+    );
+  }, []);
 
   return (
-    <div className="App">
+    <div className="breeds">
       <Table
         className="text-center align-middle md-no-table caption-top"
         bordered
@@ -55,41 +48,23 @@ function Breeds() {
           </tr>
         </thead>
         <tbody>
-          {Array.from(apiData).map((item) => (
-            <tr key={urid()}>
-              <td data-title="Name" key={urid()}>
+          {apiData.map((item) => (
+            <tr key={item.id}>
+              <td data-title="Name">
                 <a href={item.wikipedia_url} target="_blank" rel="noreferrer">
                   {item.name}
                 </a>
               </td>
-              <td data-title="Temperament" key={urid()}>
-                {item.temperament}
-              </td>
-              <td data-title="Description" key={urid()}>
-                {item.description}
-              </td>
-              <td data-title="Life Span" key={urid()}>
-                {item.life_span}
-              </td>
-              <td data-title="Child Friendly" key={urid()}>
-                {item.child_friendly}
-              </td>
-              <td data-title="Dog Friendly" key={urid()}>
-                {item.dog_friendly}
-              </td>
-              <td data-title="Stranger Friendly" key={urid()}>
-                {item.stranger_friendly}
-              </td>
-              <td data-title="Energy Level" key={urid()}>
-                {item.energy_level}
-              </td>
-              <td data-title="Grooming" key={urid()}>
-                {item.grooming}
-              </td>
-              <td data-title="Origin" key={urid()}>
-                {item.origin}
-              </td>
-              <td data-title="Image" key={urid()}>
+              <td data-title="Temperament">{item.temperament}</td>
+              <td data-title="Description">{item.description}</td>
+              <td data-title="Life Span">{item.life_span}</td>
+              <td data-title="Child Friendly">{item.child_friendly}</td>
+              <td data-title="Dog Friendly">{item.dog_friendly}</td>
+              <td data-title="Stranger Friendly">{item.stranger_friendly}</td>
+              <td data-title="Energy Level">{item.energy_level}</td>
+              <td data-title="Grooming">{item.grooming}</td>
+              <td data-title="Origin">{item.origin}</td>
+              <td data-title="Image">
                 <a
                   href={item.image.url}
                   data-lightbox="Cat Breeds"
@@ -109,6 +84,6 @@ function Breeds() {
       </Table>
     </div>
   );
-}
+});
 
-export default Breeds;
+export default BreedsComponent;
