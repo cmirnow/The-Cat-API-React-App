@@ -5,12 +5,13 @@ import { fetchRandomCatImage } from "../services/catApiService";
 const STATUS_FETCHING = "fetching";
 const STATUS_FETCHED = "fetched";
 const STATUS_LOADED = "loaded";
+const STATUS_ERROR = "error";
 
 const debouncedFetchRandomCat = debounce((setLoadingState, setImage) => {
   setLoadingState(STATUS_FETCHING);
   fetchRandomCatImage(setImage)
     .then(() => setLoadingState(STATUS_FETCHED))
-    .catch((error) => console.error("Error fetching random cat:", error.message));
+    .catch(() => setLoadingState(STATUS_ERROR));
 }, 500);
 
 const RandomComponent = memo(() => {
@@ -32,7 +33,7 @@ const RandomComponent = memo(() => {
         </button>
       </div>
       <div>
-        {loadingState !== STATUS_LOADED && (
+        {loadingState === STATUS_FETCHING && (
           <div
             className="spinner-border text-warning"
             style={{ width: "5rem", height: "5rem", margin: "60px auto" }}
@@ -41,9 +42,15 @@ const RandomComponent = memo(() => {
             <span className="visually-hidden">Loading...</span>
           </div>
         )}
-        {loadingState !== STATUS_FETCHING && image && (
+        {loadingState === STATUS_ERROR && (
+          <p style={{ color: "red", margin: "60px auto" }}>
+            Failed to load cat image. Try again!
+          </p>
+        )}
+        {loadingState !== STATUS_FETCHING && loadingState !== STATUS_ERROR && image && (
           <img
             onLoad={() => setLoadingState(STATUS_LOADED)}
+            onError={() => setLoadingState(STATUS_ERROR)}
             style={{
               display: loadingState === STATUS_LOADED ? "inline" : "none",
             }}
