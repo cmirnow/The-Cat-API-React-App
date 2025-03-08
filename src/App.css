@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-color: #212529bf;
 }
 
 .App-logo {
@@ -66,6 +65,15 @@ a:hover {
 
 .scroll-to-top:hover {
   opacity: 0.7;
+}
+
+.btn.btn-info:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+.btn.btn-info {
+  transition: transform 0.1s ease;
 }
 
 @media only screen and (max-width: 1199px) {

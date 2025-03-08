@@ -28,6 +28,7 @@ const RandomComponent = memo(() => {
         <button
           className="btn btn-info"
           onClick={() => debouncedFetchRandomCat(setLoadingState, setImage)}
+          style={{ marginTop: "1rem" }}
         >
           Get Random Cat!
         </button>
