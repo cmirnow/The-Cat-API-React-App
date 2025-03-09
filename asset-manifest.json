@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/The-Cat-API-React-App/static/css/main.cb931f16.css",
-    "main.js": "/The-Cat-API-React-App/static/js/main.673ddc8f.js",
-    "static/js/772.794aaabd.chunk.js": "/The-Cat-API-React-App/static/js/772.794aaabd.chunk.js",
+    "main.js": "/The-Cat-API-React-App/static/js/main.0042efd8.js",
+    "static/js/772.f109ddb4.chunk.js": "/The-Cat-API-React-App/static/js/772.f109ddb4.chunk.js",
     "static/css/770.a3550c10.chunk.css": "/The-Cat-API-React-App/static/css/770.a3550c10.chunk.css",
-    "static/js/770.619e7cdf.chunk.js": "/The-Cat-API-React-App/static/js/770.619e7cdf.chunk.js",
+    "static/js/770.20bcf6e6.chunk.js": "/The-Cat-API-React-App/static/js/770.20bcf6e6.chunk.js",
     "static/js/496.7b46bf2e.chunk.js": "/The-Cat-API-React-App/static/js/496.7b46bf2e.chunk.js",
     "static/js/947.97799f98.chunk.js": "/The-Cat-API-React-App/static/js/947.97799f98.chunk.js",
     "static/js/763.3216f2e0.chunk.js": "/The-Cat-API-React-App/static/js/763.3216f2e0.chunk.js",
     "static/media/logo.svg": "/The-Cat-API-React-App/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/The-Cat-API-React-App/index.html",
     "main.cb931f16.css.map": "/The-Cat-API-React-App/static/css/main.cb931f16.css.map",
-    "main.673ddc8f.js.map": "/The-Cat-API-React-App/static/js/main.673ddc8f.js.map",
-    "772.794aaabd.chunk.js.map": "/The-Cat-API-React-App/static/js/772.794aaabd.chunk.js.map",
+    "main.0042efd8.js.map": "/The-Cat-API-React-App/static/js/main.0042efd8.js.map",
+    "772.f109ddb4.chunk.js.map": "/The-Cat-API-React-App/static/js/772.f109ddb4.chunk.js.map",
     "770.a3550c10.chunk.css.map": "/The-Cat-API-React-App/static/css/770.a3550c10.chunk.css.map",
-    "770.619e7cdf.chunk.js.map": "/The-Cat-API-React-App/static/js/770.619e7cdf.chunk.js.map",
+    "770.20bcf6e6.chunk.js.map": "/The-Cat-API-React-App/static/js/770.20bcf6e6.chunk.js.map",
     "496.7b46bf2e.chunk.js.map": "/The-Cat-API-React-App/static/js/496.7b46bf2e.chunk.js.map",
     "947.97799f98.chunk.js.map": "/The-Cat-API-React-App/static/js/947.97799f98.chunk.js.map",
     "763.3216f2e0.chunk.js.map": "/The-Cat-API-React-App/static/js/763.3216f2e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cb931f16.css",
-    "static/js/main.673ddc8f.js"
+    "static/js/main.0042efd8.js"
   ]
 }
